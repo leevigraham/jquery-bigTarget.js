@@ -1,0 +1,109 @@
+<!doctype html>  
+<html lang="en" class="no-js">
+<head>
+	<meta charset="utf-8"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<style type="text/css" media="screen">
+		body{
+			font-family:sans-serif;
+			font-size:13px;
+		}
+		a{
+			color:#ff0099;
+		}
+		pre{
+			background:#333;
+			border:1px solid #000;
+			color:#fff;
+			font-size:11px;
+			padding:9px;
+		}
+		.example{
+			border:1px solid #ccc;
+			float:left;
+			margin-right:18px;
+			margin-bottom:18px;
+			padding:0 18px;
+		}
+		.big-target-click-zone{
+			background:#f2f2f2;
+		}
+		.big-target-click-zone-hover{
+			background:#ddd;
+			cursor:pointer;
+		}
+		.big-target-anchor{
+			font-style:italic;
+		}
+		.custom-big-target-click-zone{
+			border-color:#aaa;
+			background-color:#ccc;
+		}
+		.custom-big-target-click-zone-hover{
+			background-color:#bbb;
+			cursor:pointer;
+		}
+		.custom-big-target-anchor-hover{
+			background:#fff;
+			margin:0 -5px;
+			padding:3px 5px;
+		}
+		.custom-big-target-anchor{
+			font-style:italic;
+		}
+	</style>
+</head>
+<body>
+	<h1>jquery-bigTarget.js v2.0</h1> 
+	<p>jquery-bigTarget.js takes an anchor and expands it's clickzone by adding an onclick action to a parent element (defined in the clickzone plugin option) <a href="http://www.mezzoblue.com/archives/2004/08/19/fitts_law/" rel="external">improving user accessibility</a>.</p>
+	<h2>Plugin options:</h2>
+	<p>
+		<strong>clickZone</strong>: 'div:eq(0)' &rarr; parent element selector. The element will be the big target clickzone</br />
+		<strong>clickZoneClass</strong>: 'big-target-click-zone' &rarr; class added to the clickzone</br />
+		<strong>clickZoneHoverClass</strong>: 'big-target-click-zone-hover' &rarr; class add on clickzone hover</br />
+		<strong>anchorClass</strong>: 'big-target-anchor' &rarr; class added the the bigTarget anchor</br />
+		<strong>anchorHoverClass</strong>: 'big-target-anchor-hover' &rarr; class added the the bigTarget anchor on hover</br />
+		<strong>copyTitleToClickZone</strong> : true &rarr; copy the anchors title element to the clickzone</br />
+		<strong>openRelExternalInNewWindow</strong>: true &rarr; open rel="external" in a new window / tab</br />
+	</p>
+	<h2>Examples:</h2>
+	<div class="example"> 
+		<h3>No jquery-bigTarget.js</h3>
+		<p> 
+			<a href="http://ee-garage.com" title="ee-garage.com">ee-garage.com</a><br />
+			<a href="http://newism.com.au" title="newism.com.au">newism.com.au</a><br />
+			<a href="http://leevigraham.com" rel="external" title="Open leevigraham.com in a new window" rel="external">leevigraham.com</a>
+		</p> 
+	</div> 
+	<div class="example" id="example1"> 
+		<h3>jquery-bigTarget.js Defaults</h3>
+		<p> 
+			<a href="http://ee-garage.com" title="ee-garage.com">ee-garage.com</a><br />
+			<a href="http://newism.com.au" title="newism.com.au">newism.com.au</a><br />
+			<a href="http://leevigraham.com" rel="external" class="big-target-link" title="Open leevigraham.com in a new window" rel="external">leevigraham.com</a> <small> ← BigTarget Anchor</small>
+		</p> 
+		<pre><code data-execute="true">$("#example1 .big-target-link").bigTarget();</code></pre> 
+	</div> 
+	<div class="example" id="example2"> 
+		<h3>Custom options</h3>
+		<p> 
+			<a href="http://ee-garage.com" title="ee-garage.com">ee-garage.com</a><br />
+			<a href="http://newism.com.au" title="newism.com.au">newism.com.au</a><br />
+			<a href="http://leevigraham.com" rel="external" class="big-target-link" title="Open leevigraham.com in the current window" rel="external">leevigraham.com</a> <small> ← BigTarget Anchor</small>
+		</p> 
+		<pre><code data-execute="true">$("#example2 .big-target-link").bigTarget({
+    clickZone: '#example2',
+    clickZoneClass: 'custom-big-target-click-zone',
+    clickZoneHoverClass: 'custom-big-target-click-zone-hover',
+    anchorClass: 'custom-big-target-anchor',
+    anchorHoverClass: 'custom-big-target-anchor-hover',
+    copyTitleToClickZone: false,
+    openRelExternalInNewWindow: false
+});</code></pre>
+	<p>Tested in Safari, Firefox &amp; Chrome.</p>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.1/jquery.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery-bigTarget.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" charset="utf-8">eval(jQuery('code[data-execute=true]').text());</script>
+</body>
+</html>
