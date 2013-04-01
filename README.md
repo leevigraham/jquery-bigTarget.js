@@ -9,13 +9,10 @@ Stable, no longer developed
 ## Usage
 
 ``` js
-
-# Simple Example
-
+// Simple Example
 $(".big-target-link").bigTarget();
 
-# Complete Example
-
+// Complete Example
 $("#example2 .big-target-link").bigTarget({
     clickZone: '#example2',
     clickZoneClass: 'custom-big-target-click-zone',
