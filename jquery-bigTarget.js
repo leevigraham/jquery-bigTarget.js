@@ -62,11 +62,14 @@
 						.hover(function() {
 							$clickZone.toggleClass(o['clickZoneHoverClass']);
 						})
-						.click(function() {
-							if(getSelectedText() == "") {
-								($a.is('[rel*=external]') && o["openRelExternalInNewWindow"]) 
-									? window.open(href) 
-									: window.location = href;
+						.click(function(e) {
+							if ( ! e.ctrlKey)
+							{
+								if(getSelectedText() == "") {
+									($a.is('[rel*=external]') && o["openRelExternalInNewWindow"]) 
+										? window.open(href) 
+										: window.location = href;
+								}
 							}
 						});
 				});
