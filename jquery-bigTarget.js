@@ -63,7 +63,7 @@
 							$clickZone.toggleClass(o['clickZoneHoverClass']);
 						})
 						.click(function(e) {
-							if ( ! e.ctrlKey)
+							if ( ! (e.metaKey || e.ctrlKey))
 							{
 								if(getSelectedText() == "") {
 									($a.is('[rel*=external]') && o["openRelExternalInNewWindow"]) 
