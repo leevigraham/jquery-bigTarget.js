@@ -7,7 +7,7 @@
 * jquery-bigTarget.js takes an anchor and expands it's clickzone by adding an onclick action to a parent element (defined in the clickzone plugin option)  improving user accessibility.
 *
 * Plugin options:
-* 
+*
 * clickZone: 'div:eq(0)', // parent element selector. The element will be the big target clickzone
 * clickZoneClass: 'big-target-click-zone', // class added to the clickzone
 * clickZoneHoverClass: 'big-target-click-zone-hover', // class add on clickzone hover
@@ -64,8 +64,8 @@
 						})
 						.click(function() {
 							if(getSelectedText() == "") {
-								($a.is('[rel*=external]') && o["openRelExternalInNewWindow"]) 
-									? window.open(href) 
+								($a.is('[rel*=external]') && o["openRelExternalInNewWindow"])
+									? window.open(href)
 									: window.location = href;
 							}
 						});
@@ -73,7 +73,7 @@
 		});
 	}
 
-	function getSelectedText(){ 
+	function getSelectedText(){
 		var t = false;
 		 if(window.getSelection) {
 			 t = window.getSelection().toString();
