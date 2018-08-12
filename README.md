@@ -29,8 +29,8 @@ $("#example2 .big-target-link").bigTarget({
 * `clickZone: 'div:eq(0)' - parent element selector. The element will be the big target clickzone
 * `clickZoneClass`: 'big-target-click-zone' - class added to the clickzone
 * `clickZoneHoverClass`: 'big-target-click-zone-hover' - class add on clickzone hover
-* `anchorClass`: 'big-target-anchor' - class added the the bigTarget anchor
-* `anchorHoverClass`: 'big-target-anchor-hover' - class added the the bigTarget anchor on hover
+* `anchorClass`: 'big-target-anchor' - class added the bigTarget anchor
+* `anchorHoverClass`: 'big-target-anchor-hover' - class added the bigTarget anchor on hover
 * `copyTitleToClickZone`: true - copy the anchors title element to the clickzone
 * `openRelExternalInNewWindow`: true - open rel="external" in a new window / tab
 
