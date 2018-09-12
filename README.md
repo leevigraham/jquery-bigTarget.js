@@ -26,7 +26,7 @@ $("#example2 .big-target-link").bigTarget({
 
 ## Plugin options
 
-* `clickZone: 'div:eq(0)' - parent element selector. The element will be the big target clickzone
+* `clickZone: 'div:eq(0)'` - parent element selector. The element will be the big target clickzone
 * `clickZoneClass`: 'big-target-click-zone' - class added to the clickzone
 * `clickZoneHoverClass`: 'big-target-click-zone-hover' - class add on clickzone hover
 * `anchorClass`: 'big-target-anchor' - class added the bigTarget anchor
